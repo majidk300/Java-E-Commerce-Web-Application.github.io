@@ -1,0 +1,178 @@
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style:none;
+    text-decoration:none;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #edf2f4;
+}
+
+/*NAVBAR START*/
+.navbar{
+    position: fixed;
+    left:0;
+    top: 0;
+    padding:15px 0 15px 0;
+    box-shadow: 0px 8px 11px -2px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 0px 8px 11px -2px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 8px 11px -2px rgba(0,0,0,0.07);
+    width: 100%;
+    z-index:1111111111;
+    background: #edf2f4;
+}
+
+
+.navbar .sub-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width:90%;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+}
+
+.navbar .sub-nav .logo img{
+    position:relative;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar .sub-nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 30px;
+    word-spacing:1px;
+    letter-spacing: 1px;
+}
+
+.navbar .sub-nav ul li a{
+    position: relative;
+    color:#2f3e46;
+    font-weight:600;
+}
+
+.navbar .sub-nav ul li a:hover{
+    color:#009999;
+}
+
+
+.navbar .sub-nav ul li a:after{
+    content: ' ';
+    position: absolute;
+    background:#009999;
+    height: 3px;
+    width: 0;
+    left:0;
+    bottom:-5px;
+    transition:all 0.3s ease-in-out;
+}
+
+.navbar .sub-nav ul li a:hover:after{
+    width: 50%;
+}
+
+.navbar .sub-nav ul li .active{
+    color:#009999;
+}
+
+.navbar .sub-nav ul li img{
+    position: relative;
+    max-width:23px;
+    height:auto;
+    border-radius: 50% 50%;
+    background-size: 100% 100%;
+}
+/*NAVBAR END*/
+/*...............................................................................................................................................................................*/
+/*...............................................................................................................................................................................*/
+/*...............................................................................................................................................................................*/
+
+/*SHOP TRADE IN OFFER START*/
+.mainShopTrade{
+    width:100%;
+    height:100vh;
+}
+
+.mainShopTrade .shopTade{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width:90%;
+    margin: auto;
+    margin-top:90px;
+    /*background: red;*/
+}
+
+.mainShopTrade .shopTade .trade{
+    margin-top: 11%;
+    z-index:11;
+}
+
+.mainShopTrade .shopTade .trade .pTrade{
+    font-size:18px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    word-spacing: 1px;
+    opacity:0.9;
+}
+.mainShopTrade .shopTade .trade .superValue{
+    margin-top: 12px;
+}
+.mainShopTrade .shopTade .trade h1{
+    font-size:52px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-weight: 900;
+    opacity:0.9;
+    line-height:60px;
+}
+
+.mainShopTrade .shopTade .trade .onallproducts{
+    color:#006666;
+}
+
+.mainShopTrade .shopTade .trade .pCoupons{
+    font-size:15px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-weight: bold;
+    opacity:0.7;
+    margin-top: 20px;
+}
+
+.mainShopTrade .shopTade .btn{
+    font-size:16px;
+    border:0;
+    padding: 12px 80px;
+    margin-top: 28px;
+    transition: all 0.1s ease-in-out;
+}
+
+.mainShopTrade .shopTade .btn a{
+    color: #006666;
+    font-weight: bold;
+    align-content: center;
+}
+
+.mainShopTrade .shopTade .btn:hover{
+    font-size: 16.3px;
+}
+
+/*modal image*/
+.mainShopTrade .shopTade .modal{
+     
+}
+/*SHOP TRADE IN OFFER END*/
