@@ -22,15 +22,16 @@
 
         <div class="container">
             <div class="wrapper">
+                 <%@include file="components/message/errorMessage.jsp" %>
                 <div class="title"><span>Login Form</span></div>
                 <form action="loginServlet" method="post">
                     <div class="row">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input type="text" placeholder="Email" required>
+                        <input name="email" type="email" placeholder="Email" required>
                     </div>
                     <div class="row">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" required>
+                        <input name="password" type="password" placeholder="Password" required>
                     </div>
                     <div class="pass"><a href="#">Forgot password?</a></div>
                     <div class="row button">

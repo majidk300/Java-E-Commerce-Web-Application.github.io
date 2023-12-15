@@ -89,10 +89,11 @@ body{
 
 .navbar .sub-nav ul li img{
     position: relative;
-    max-width:23px;
-    height:auto;
+    width:28px;
+    height:28px;
     border-radius: 50% 50%;
     background-size: 100% 100%;
+    margin-top: -2px;
 }
 /*NAVBAR END*/
 /*...............................................................................................................................................................................*/
@@ -173,6 +174,82 @@ body{
 
 /*modal image*/
 .mainShopTrade .shopTade .modal{
-     
+
 }
 /*SHOP TRADE IN OFFER END*/
+/*....................................................................................................................................................................*/
+/*....................................................................................................................................................................*/
+/*....................................................................................................................................................................*/
+
+/*FEATURED SESTION START*/
+.featureSesstion{
+    width: 100%;
+    height:auto;
+    padding: 35px 0 35px 0;
+    background: #ffffff;
+}
+
+.featureSesstion .featured{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.featureSesstion .featured .divFeature{
+    border: 1px solid #cccccc;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+
+.featureSesstion .featured .divFeature:hover{
+    background: #f8f9fa;
+}
+
+.featureSesstion .featured .divFeature .img img{
+    width:150px;
+    height: auto;
+}
+
+.featureSesstion .featured .divFeature p{
+    color: #003333;
+    font-size: 15px;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+    padding: 2px 4px 2px 4px;
+    margin-top: 5px;
+    word-spacing:1px;
+    position: relative;
+    top: 3px;
+}
+
+.featureSesstion .featured .divFeature .p1{
+    background: #ffcad4;
+
+}
+
+.featureSesstion .featured .divFeature .p2{
+    background: #b7e4c7;
+}
+
+.featureSesstion .featured .divFeature .p3{
+    background: #caf0f8;
+}
+.featureSesstion .featured .divFeature .p4{
+    background: #e0b1cb;
+}
+
+.featureSesstion .featured .divFeature .p5{
+    background: #ffd6e0;
+}
+
+.featureSesstion .featured .divFeature .p6{
+    background: #ffe3e0;
+}
+/*FEATURED SESTION END*/

@@ -8,29 +8,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="userRegisterDetails")
+@Table(name = "userRegisterDetails")
 public class registerEntities {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
-    
-    @Column(length=100)
+
+    @Column(length = 100)
     private String userName;
-    
-    @Column(length=100, unique=true)
+
+    @Column(length = 100, unique = true)
     private String userEmail;
-    
-    @Column(length=100)
+
+    @Column(length = 100)
     private String userPassword;
-    
-    @Column(length=100)
+
+    @Column(length = 100)
     private String userPhone;
-    
-    @Column(length=100)
+
+    @Column(length = 100)
     private String userType;
-    
-    @Column(length=100)
+
+    @Column(length = 100)
     private String userPic;
 
     public int getUserId() {
@@ -96,6 +96,9 @@ public class registerEntities {
         this.userPhone = userPhone;
         this.userType = userType;
         this.userPic = userPic;
+    }
+
+    public registerEntities() {
     }
 
     @Override

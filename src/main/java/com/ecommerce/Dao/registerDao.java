@@ -5,6 +5,7 @@ import com.ecommerce.entitites.registerEntities;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 public class registerDao {
     
@@ -36,6 +37,55 @@ public class registerDao {
         
         
         return flag;
+    }
+    
+//    For Validate user is Valid
+    public registerEntities checkEmailAndPassword(String email, String password){
+        
+        registerEntities user = null;
+        
+        try{
+            
+            Session s = this.factory.openSession();
+            
+            Query q = s.createQuery("from registerEntities where userEmail=:e and userPassword=:p");
+            
+            q.setParameter("e", email);
+            q.setParameter("p", password);
+            
+            user = (registerEntities) q.uniqueResult();
+            
+            s.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        return user;
+    }
+    
+    //        For Fetch  all User Details
+    public registerEntities getAllUserDetails(){
+        
+        registerEntities user = null;
+        
+        try{
+            
+            Session s  = this.factory.openSession();
+            
+            Query q = s.createQuery("from registerEntities");
+            
+            user = (registerEntities) q.uniqueResult();
+            
+            s.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        
+        return user;
+        
     }
     
 }

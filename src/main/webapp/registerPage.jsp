@@ -29,7 +29,7 @@
                     </div>
                     <div class="row">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input name="userEmail" type="text" placeholder="Email" required>
+                        <input name="userEmail" type="email" placeholder="Email" required>
                     </div>
                     <div class="row">
                         <i class="fas fa-lock"></i>

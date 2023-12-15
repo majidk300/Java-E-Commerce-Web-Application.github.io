@@ -48,7 +48,62 @@
             
         </div>
         </div>
+        
         <!--SHOP TRADE IN OFFER START END-->
+        <!--.....................................................................................................................................................................-->
+        <!--.....................................................................................................................................................................-->
+        <!--.....................................................................................................................................................................-->
+        
+        <!--FEATURED SESTION START-->
+        <div class="featureSesstion">
+            <div class="featured">
+                
+                <div class="divFeature">
+                    <div class="img">
+                        <img src="components/image/features/f1.png" alt="alt"/>
+                    </div>
+                    <p class="p1">Free Shipping</p>
+                </div>
+                
+                <div class="divFeature">
+                    <div class="img">
+                        <img src="components/image/features/f2.png" alt="alt"/>
+                    </div>
+                    <p class="p2">Online Order</p>
+                </div>
+                
+                <div class="divFeature">
+                    <div class="img">
+                        <img src="components/image/features/f3.png" alt="alt"/>
+                    </div>
+                    <p class="p3">Save Money</p>
+                </div>
+                
+                <div class="divFeature">
+                    <div class="img">
+                        <img src="components/image/features/f4.png" alt="alt"/>
+                    </div>
+                    <p class="p4">Promotions</p>
+                </div>
+                
+                <div class="divFeature">
+                    <div class="img">
+                        <img src="components/image/features/f5.png" alt="alt"/>
+                    </div>
+                    <p class="p5">Happy Sell</p>
+                </div>
+                
+                <div class="divFeature">
+                    <div class="img">
+                        <img src="components/image/features/f6.png" alt="alt"/>
+                    </div>
+                    <p class="p6">F24/7 Support</p>
+                </div>
+                
+                
+            </div>
+        </div>
+        <!--FEATURED SESTION END-->
         
     </body>
 </html>
