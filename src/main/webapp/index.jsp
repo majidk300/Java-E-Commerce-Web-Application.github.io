@@ -154,7 +154,7 @@
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/f2.jpg" alt="alt"/>
                     </div>
 
                     <p>abibas</p>
@@ -188,7 +188,7 @@
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/f3.jpg" alt="alt"/>
                     </div>
 
                     <p>abibas</p>
@@ -222,7 +222,7 @@
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/f4.jpg" alt="alt"/>
                     </div>
 
                     <p>abibas</p>
@@ -256,7 +256,7 @@
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/f5.jpg" alt="alt"/>
                     </div>
 
                     <p>abibas</p>
@@ -290,7 +290,7 @@
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/f6.jpg" alt="alt"/>
                     </div>
 
                     <p>abibas</p>
@@ -324,7 +324,7 @@
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/f7.jpg" alt="alt"/>
                     </div>
 
                     <p>abibas</p>
@@ -358,7 +358,7 @@
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/f8.jpg" alt="alt"/>
                     </div>
 
                     <p>abibas</p>
@@ -395,6 +395,10 @@
 
         </div>
         <!--FEATURED PRODUCTS END-->
-
+        
+        <!--...................................................................................................................................................................-->
+        <!--...................................................................................................................................................................-->
+        <!--...................................................................................................................................................................-->
+  
     </body>
 </html>

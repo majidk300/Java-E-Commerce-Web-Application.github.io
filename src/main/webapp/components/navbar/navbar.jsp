@@ -2,11 +2,11 @@
 <%@page import="com.ecommerce.helper.factoryProvider"%>
 <%@page import="com.ecommerce.Dao.registerDao"%>
 <%
-    
+
     registerDao register = new registerDao(factoryProvider.getFactory());
     registerEntities userDetails = (registerEntities) register.getAllUserDetails();
-   
-     registerEntities userDetails1 = (registerEntities) session.getAttribute("user");
+
+    registerEntities userDetails1 = (registerEntities) session.getAttribute("user");
 %>
 
 <div class="navbar">
@@ -33,12 +33,15 @@
                 <li><a href="loginPage.jsp"><img src="components/logo/user.png"/></a></li>
 
                 <%
-                    } else {
-                      %>
-                          <li><a href="adminPage.jsp"><img src="components/logo/<%=userDetails.getUserPic()%>"/></a></li>
-                      <%
-                    }
+                } else {
+               
                 %>
+                <li><a href="adminPage.jsp"><img src="components/logo/<%=userDetails1.getUserPic()%>"/></a></li>
+                        <%
+                               
+                            }
+
+                        %>
 
 
 
