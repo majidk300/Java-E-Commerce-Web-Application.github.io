@@ -4,7 +4,6 @@
 <%
 
     registerDao register = new registerDao(factoryProvider.getFactory());
-    registerEntities userDetails = (registerEntities) register.getAllUserDetails();
 
     registerEntities userDetails1 = (registerEntities) session.getAttribute("user");
 %>

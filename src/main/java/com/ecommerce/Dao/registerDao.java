@@ -2,6 +2,7 @@
 package com.ecommerce.Dao;
 
 import com.ecommerce.entitites.registerEntities;
+import java.util.List;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -64,10 +65,11 @@ public class registerDao {
         return user;
     }
     
-    //        For Fetch  all User Details
-    public registerEntities getAllUserDetails(){
+    
+    
+    public List<registerEntities> getAllUserDetails(){
         
-        registerEntities user = null;
+        List<registerEntities> users = null;
         
         try{
             
@@ -75,7 +77,7 @@ public class registerDao {
             
             Query q = s.createQuery("from registerEntities");
             
-            user = (registerEntities) q.uniqueResult();
+             users = q.list();
             
             s.close();
             
@@ -84,7 +86,7 @@ public class registerDao {
         }
         
         
-        return user;
+        return users;
         
     }
     

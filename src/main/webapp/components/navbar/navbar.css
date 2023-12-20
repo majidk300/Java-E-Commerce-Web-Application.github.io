@@ -135,7 +135,7 @@ body{
 }
 .mainShopTrade .shopTade .trade h1{
     font-size:52px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     word-spacing: 1px;
     font-weight: 900;
     opacity:0.9;
@@ -194,15 +194,20 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: center;
     width: 90%;
     height: auto;
     margin: auto;
+    gap:25px;
 }
 
 .featureSesstion .featured .divFeature{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     border: 1px solid #cccccc;
-    padding: 20px 10px 20px 10px;
+    padding: 20px 10px;
     text-align: center;
     margin-bottom:10px;
     border-radius:5px;
@@ -213,8 +218,9 @@ body{
 }
 
 .featureSesstion .featured .divFeature .img img{
-    width:150px;
+    width: 100%;
     height: auto;
+    margin-bottom: 5px;
 }
 
 .featureSesstion .featured .divFeature p{
@@ -265,11 +271,16 @@ body{
     padding: 20px 0 20px 0;
 }
 
+.newArrivalHead{
+    width: 90%;
+    margin: auto;
+}
+
 .featured-Products h4{
     font-size: 32px;
     text-align: center;
     word-spacing: 2px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .featured-Products .para{
@@ -281,27 +292,31 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content:space-between;
+    justify-content: center;
     width: 90%;
     height: auto;
     margin: auto;
-     gap: 8px;
-     margin-top:30px;
+    gap: 25px;
+    margin-top:30px;
 }
 
 .featured-Products .featured .products{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
     word-wrap:break-word;
-    padding: 8px ;
+    padding: 10px ;
     border-radius: 10px;
     overflow-wrap: break-word;
     border: 1px solid #cccccc;
-    margin-top: 10px;
- 
+    margin-bottom: 10px;
+
 }
 
 .featured-Products .featured .products .img img{
-    height: 250px;
-    width: auto;
+    width:100% ;
+    height: 280px;
     background: transparent;
     border-radius: 10px;
 }
@@ -333,7 +348,7 @@ body{
 .end-part{
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .featured-Products .featured .products .price{
@@ -343,18 +358,434 @@ body{
 }
 
 .featured-Products .featured .products .add-cart i{
-    color: #006600;
+    color: #009999;
     border: 1px solid #cccccc;
     border-radius:50%;
-    padding:10px 8px 10px 8px;
+    padding:10px;
     position: relative;
-    top: -3px;
-   right:5px;
-   cursor:pointer;
+    top: -8px;
+    right:6px;
+    cursor:pointer;
+    background: #edf2f4;
 }
 .featured-Products .featured .products .add-cart i:hover{
-    color: white;
-    background: #006600;
-    
+    color: #ffffff;
+    background: #009999;
+
 }
 /*FEATURED PRODUCTS END*/
+/*........................................................................................................................................................................*/
+/*........................................................................................................................................................................*/
+/*........................................................................................................................................................................*/
+/*REPAIR SERVICES START*/
+.repairService{
+    display: flex;
+    flex-grow: 1;
+    height: auto;
+    background-size:cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 90px 10px 90px 10px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.repairService .services{
+    color:#ffffff;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+}
+
+.repairService .services p{
+    font-size: 14px;
+}
+
+.repairService .services h2{
+    font-size: 28px;
+    margin-top:5px;
+}
+
+.repairService .services .discount{
+    color: #ff0000;
+}
+
+.repairService .services .btn{
+    font-size: 14px;
+    border: 0;
+    padding: 7px 18px 7px 18px;
+    color: #000000;
+    margin-top:15px;
+    border-radius:1px;
+}
+
+.repairService .services .btn:hover{
+    color: #ffffff;
+    background: #009999;
+}
+/*REPAIR SERVICES END*/
+/*.............................................................................................................................................................................*/
+/*.............................................................................................................................................................................*/
+/*.............................................................................................................................................................................*/
+
+/*NEW ARRIVALS START*/
+
+/*NEW ARRIVALS END*/
+
+/*.............................................................................................................................................................................*/
+/*.............................................................................................................................................................................*/
+/*.............................................................................................................................................................................*/
+/*BANNERS BUY ONR GET ONR FREE & UPCOMING SEASON START*/
+.deal-banners{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+}
+
+.deal-banners .sub-banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: stretch;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 30px 0 30px 0;
+    gap: 25px;
+}
+
+.deal-banners .sub-banner .season-deals{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 420px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    padding:0 0 0 25px;
+
+}
+
+.deal-banners .sub-banner .season-deals p{
+    font-size: 17px;
+    letter-spacing: 2px ;
+    word-spacing: 2px;
+}
+
+.deal-banners .sub-banner .season-deals h3{
+    font-size: 28px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    margin-top: 3px;
+}
+
+.deal-banners .sub-banner .season-deals .sp{
+    font-size: 14px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin-top: 3px;
+}
+
+.deal-banners .sub-banner .season-deals .btn{
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    padding: 7px 18px 7px 18px;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.deal-banners .sub-banner .season-deals .btn:hover{
+    border: 1px solid #009999;
+    background: #009999;
+    color:#ffffff;
+}
+/*BANNERS BUY ONR GET ONR FREE & UPCOMING SEASON END*/
+
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+
+/*SEASON SALES- START*/
+.season-sales{
+    width: 100%;
+    height: auto;
+    margin-bottom: 45px;
+}
+
+.season-sales .season{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    gap: 25px;
+}
+
+.season-sales .season .sales{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    height: 260px;
+    padding:0 0 0 25px;
+    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.season-sales .season .sales h3{
+    font-size: 24px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.season-sales .season .sales p{
+    font-size: 14px;
+    color: #990000;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+/*SEASON SALES- END*/
+
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+
+/*SIGN UP FOR NEWSLETTERS START*/
+.news-letter{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.news-letter .sign-Up{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 40px 0 40px 0;
+    color: white;
+}
+
+.news-letter .sign-Up h2{
+    font-size: 26px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.news-letter .sign-Up p{
+    font-size: 12px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin-top: 5px;
+}
+
+.news-letter .sign-Up .email{
+    width: 300px;
+    padding:12px 2px 12px 8px;
+    outline: 0;
+    border: 0;
+
+}
+
+.sign-btn{
+    display: flex;
+    flex-direction: row;
+}
+
+.news-letter .sign-Up .btn{
+    position: relative;
+    top: -0.1px;
+    padding:12.3px 15px 12.3px 15px;
+    border:0;
+    outline: 0;
+    color: #ffffff;
+    background: #009999;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.news-letter .sign-Up .btn:hover{
+
+}
+/*SIGN UP FOR NEWSLETTERS END*/
+
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+/*FOOTER SECTION START*/
+.footer-section{
+    width: 100%;
+    height: auto;
+    padding: 30px 0 30px 0;
+}
+
+.footer-section .footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.footer-section .footer .details img{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.footer-section .footer .details h2{
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: #000000;
+    opacity: 0.93;
+    margin:20px 0 10px 0;
+}
+
+
+.footer-section .footer .details .user-info{
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: #333333;
+    opacity: 1;
+    font-weight:  bold;
+    line-height: 20px;
+}
+
+.footer-section .footer .details span{
+    font-size: 14px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: #333333;
+    opacity: 1;
+    line-height:10px;
+}
+.footer-section .footer .details .follow-us h4{
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    color: #000000;
+    opacity: 0.9;
+    margin: 18px 0  12px 0;
+}
+
+.footer-section .footer .details .follow-us .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+
+
+.footer-section .footer .details .follow-us .icons i{
+    font-size: 16px;
+
+}
+
+
+.footer-section .footer .details .follow-us .icons i:hover{
+    color: #009999;
+
+}
+
+.footer-section .footer .details .store{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    margin:15px 0 18px 0;
+}
+
+.footer-section .footer .details .store .app{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    border: 2.2px solid #cccccc;
+    padding: 5px 35px ;
+    gap:3px;
+    transition: 0.2s ease-in-out;
+}
+
+
+.footer-section .footer .details .store .app:hover{
+    color: #ffffff;
+    background: #009999;
+}
+
+.footer-section .footer .details .store .app .icon{
+    font-size: 24px;
+    opacity: 0.9;
+}
+
+.footer-section .footer .details .store .app .icons{
+    font-size: 18px;
+}
+
+.footer-section .footer .details .info p{
+    font-size: 10px;
+    position: relative;
+    top:3px;
+
+}
+
+.footer-section .footer .details .info h3{
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.footer-section .footer .details .google-play{
+    opacity: 0.7!important;
+}
+
+.payment-Method .pay-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin:10px 0 0 0;
+    font-size: 30px;
+    opacity: 0.98;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-Method .pay-icons i:hover{
+    border: 0;
+    outline: 0;
+    color: #009999;
+}
+
+.footer-section .copyrights{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.85;
+    padding: 15px 35px;
+}
+
+
+/*FOOTER SECTION END*/
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+/*............................................................................................................................................................................*/
+
