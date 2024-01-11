@@ -1,7 +1,15 @@
-
+<%@page import="com.ecommerce.entitites.addProductsEntities"%>
+<%@page import="java.util.List"%>
+<%@page import="com.ecommerce.Dao.ProductCategoryDao"%>
 <%@page import="org.hibernate.SessionFactory"%>
 <%@page import="com.ecommerce.helper.factoryProvider"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+    ProductCategoryDao products = new ProductCategoryDao(factoryProvider.getFactory());
+    List<addProductsEntities> p = products.getAllProducts();
+    %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -118,17 +126,20 @@
 
             <div class="featured">
 
-
+             
+                <% 
+                    for(addProductsEntities  featureProducts:p){
+                %>
                 <div class="products">
 
                     <div class="img">
-                        <img src="components/image/products/f1.jpg" alt="alt"/>
+                        <img src="components/image/products/<%=featureProducts.getImageOne()%>" alt="alt"/>
                     </div>
 
-                    <p>abibas</p>
+                    <p><%=featureProducts.getCategories().getCategoryTitle()%></p>
 
                     <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
+                        <span class=""><%=featureProducts.getProductTile()%></span>
                     </div>
 
                     <div class="rating">
@@ -142,7 +153,7 @@
 
                     <div class="end-part">
                         <div class="price-rate">
-                            <span class="price">$ 78</span>
+                            <span class="price">&#x20B9; <%=featureProducts.getProductPrice()%></span>
                         </div>
 
                         <div class="add-cart">
@@ -152,245 +163,9 @@
 
                 </div>
 
-
-                <div class="products">
-
-                    <div class="img">
-                        <img src="components/image/products/f2.jpg" alt="alt"/>
-                    </div>
-
-                    <p>abibas</p>
-
-                    <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
-                    </div>
-
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-
-                    </div>
-
-                    <div class="end-part">
-                        <div class="price-rate">
-                            <span class="price">$ 78</span>
-                        </div>
-
-                        <div class="add-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="products">
-
-                    <div class="img">
-                        <img src="components/image/products/f3.jpg" alt="alt"/>
-                    </div>
-
-                    <p>abibas</p>
-
-                    <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
-                    </div>
-
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-
-                    </div>
-
-                    <div class="end-part">
-                        <div class="price-rate">
-                            <span class="price">$ 78</span>
-                        </div>
-
-                        <div class="add-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="products">
-
-                    <div class="img">
-                        <img src="components/image/products/f4.jpg" alt="alt"/>
-                    </div>
-
-                    <p>abibas</p>
-
-                    <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
-                    </div>
-
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-
-                    </div>
-
-                    <div class="end-part">
-                        <div class="price-rate">
-                            <span class="price">$ 78</span>
-                        </div>
-
-                        <div class="add-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="products">
-
-                    <div class="img">
-                        <img src="components/image/products/f5.jpg" alt="alt"/>
-                    </div>
-
-                    <p>abibas</p>
-
-                    <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
-                    </div>
-
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-
-                    </div>
-
-                    <div class="end-part">
-                        <div class="price-rate">
-                            <span class="price">$ 78</span>
-                        </div>
-
-                        <div class="add-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="products">
-
-                    <div class="img">
-                        <img src="components/image/products/f6.jpg" alt="alt"/>
-                    </div>
-
-                    <p>abibas</p>
-
-                    <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
-                    </div>
-
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-
-                    </div>
-
-                    <div class="end-part">
-                        <div class="price-rate">
-                            <span class="price">$ 78</span>
-                        </div>
-
-                        <div class="add-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="products">
-
-                    <div class="img">
-                        <img src="components/image/products/f7.jpg" alt="alt"/>
-                    </div>
-
-                    <p>abibas</p>
-
-                    <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
-                    </div>
-
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-
-                    </div>
-
-                    <div class="end-part">
-                        <div class="price-rate">
-                            <span class="price">$ 78</span>
-                        </div>
-
-                        <div class="add-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="products">
-
-                    <div class="img">
-                        <img src="components/image/products/f8.jpg" alt="alt"/>
-                    </div>
-
-                    <p>abibas</p>
-
-                    <div class="productTitle">
-                        <span class="">Cartoon Astronaut T-Shirt</span>
-                    </div>
-
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-
-                    </div>
-
-                    <div class="end-part">
-                        <div class="price-rate">
-                            <span class="price">$ 78</span>
-                        </div>
-
-                        <div class="add-cart">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                    </div>
-
-                </div>
-
-
+               <%
+                  }
+               %>
 
 
             </div>

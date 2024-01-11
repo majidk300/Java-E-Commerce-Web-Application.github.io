@@ -1,7 +1,8 @@
+
 package com.ecommerce.Servlet;
 
-import com.ecommerce.Dao.registerDao;
-import com.ecommerce.entitites.registerEntities;
+import com.ecommerce.Dao.ProductCategoryDao;
+import com.ecommerce.entitites.productCategoryEntities;
 import com.ecommerce.helper.factoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,39 +12,31 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Majid
- */
-public class loginServlet extends HttpServlet {
+public class CategoryServlet extends HttpServlet {
 
+  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
             
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
+            String category = request.getParameter("category");
             
-            try{
+            productCategoryEntities productCategory = new productCategoryEntities(category);
+            
+            try {
                 
-                registerDao rDao = new registerDao(factoryProvider.getFactory());
-                registerEntities user = rDao.checkEmailAndPassword(email, password);
+                 ProductCategoryDao pCategory =  new ProductCategoryDao(factoryProvider.getFactory());
+                 pCategory.saveCategory(productCategory);
                 
-                HttpSession  httpSession  = request.getSession();
-                
-                if(user==null){
-                    httpSession.setAttribute("alertMessage", "Invalid Email  and Password");
-                    response.sendRedirect("loginPage.jsp");
-                }else{
-                    httpSession.setAttribute("user",user);
-                    response.sendRedirect("adminPage.jsp");
-                }
-                
-                
-            }catch(Exception e){
+            }catch (Exception e){
                 e.printStackTrace();
             }
+            
+            HttpSession httpSession = request.getSession();
+            httpSession.setAttribute("categorymessage", "Added Category");
+            response.sendRedirect("AdminPageCategoty.jsp");
         }
     }
 

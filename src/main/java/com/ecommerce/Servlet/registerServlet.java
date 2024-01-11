@@ -1,4 +1,3 @@
-
 package com.ecommerce.Servlet;
 
 import com.ecommerce.Dao.registerDao;
@@ -59,8 +58,8 @@ public class registerServlet extends HttpServlet {
             fos.write(data);
             
             HttpSession httpSession = request.getSession();
-            httpSession.setAttribute("message", "Registered successfully");
-            response.sendRedirect("registerPage.jsp");
+            httpSession.setAttribute("alertMessage", "Registered successfully");
+            response.sendRedirect("loginPage.jsp");
             
         }
     }

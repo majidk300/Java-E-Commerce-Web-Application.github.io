@@ -1,49 +1,66 @@
+
 package com.ecommerce.Servlet;
 
 import com.ecommerce.Dao.registerDao;
 import com.ecommerce.entitites.registerEntities;
 import com.ecommerce.helper.factoryProvider;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Majid
- */
-public class loginServlet extends HttpServlet {
+@MultipartConfig
+public class updateUserDetailsServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
+            int Id = Integer.parseInt(request.getParameter("userId"));
+            String name  = request.getParameter("userName");
+            String email  = request.getParameter("userEmail");
+            String password  = request.getParameter("userPassword");
+            String phone  = request.getParameter("userPhone");
+            String type = request.getParameter("userType");
+            Part part = request.getPart("userImage");
+            
             
             try{
                 
-                registerDao rDao = new registerDao(factoryProvider.getFactory());
-                registerEntities user = rDao.checkEmailAndPassword(email, password);
+                registerEntities userUpdatesDetails = new registerEntities(Id, name, email, password, phone, type, part.getSubmittedFileName());
                 
-                HttpSession  httpSession  = request.getSession();
+                registerDao registerdao = new registerDao(factoryProvider.getFactory());
                 
-                if(user==null){
-                    httpSession.setAttribute("alertMessage", "Invalid Email  and Password");
-                    response.sendRedirect("loginPage.jsp");
-                }else{
-                    httpSession.setAttribute("user",user);
-                    response.sendRedirect("adminPage.jsp");
-                }
-                
+                registerdao.updateUserDetails(userUpdatesDetails);
+               
                 
             }catch(Exception e){
                 e.printStackTrace();
             }
+            
+              //For image Update on this path
+            String path = request.getRealPath("components")+File.separator+"logo"+File.separator+part.getSubmittedFileName();
+            
+            FileOutputStream fos = new FileOutputStream(path);
+            InputStream is = part.getInputStream();
+            
+            byte[] data = new byte[is.available()];
+            
+            is.read(data);
+            fos.write(data);
+            
+            HttpSession httpSession = request.getSession();
+            httpSession.setAttribute("alertMessage", "Updated successfully");
+            response.sendRedirect("loginPage.jsp");
         }
     }
 

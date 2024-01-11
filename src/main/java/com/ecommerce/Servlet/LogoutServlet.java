@@ -1,8 +1,6 @@
+
 package com.ecommerce.Servlet;
 
-import com.ecommerce.Dao.registerDao;
-import com.ecommerce.entitites.registerEntities;
-import com.ecommerce.helper.factoryProvider;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -11,39 +9,17 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Majid
- */
-public class loginServlet extends HttpServlet {
+public class LogoutServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            
-            try{
-                
-                registerDao rDao = new registerDao(factoryProvider.getFactory());
-                registerEntities user = rDao.checkEmailAndPassword(email, password);
-                
-                HttpSession  httpSession  = request.getSession();
-                
-                if(user==null){
-                    httpSession.setAttribute("alertMessage", "Invalid Email  and Password");
-                    response.sendRedirect("loginPage.jsp");
-                }else{
-                    httpSession.setAttribute("user",user);
-                    response.sendRedirect("adminPage.jsp");
-                }
-                
-                
-            }catch(Exception e){
-                e.printStackTrace();
-            }
+           
+            HttpSession httpSession = request.getSession();
+            httpSession.removeAttribute("user");
+            response.sendRedirect("loginPage.jsp");
+            httpSession.setAttribute("alertMessage","Logout Successfully");
         }
     }
 

@@ -1,6 +1,6 @@
 <%
 
-    String message = (String) session.getAttribute("message");
+    String message = (String) session.getAttribute("categorymessage");
     
    if(message!=null){
 

@@ -98,6 +98,18 @@ public class registerEntities {
         this.userPic = userPic;
     }
 
+    public registerEntities(int userId, String userName, String userEmail, String userPassword, String userPhone, String userType, String userPic) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userPhone = userPhone;
+        this.userType = userType;
+        this.userPic = userPic;
+    }
+    
+    
+
     public registerEntities() {
     }
 

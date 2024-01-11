@@ -1,0 +1,303 @@
+
+.admin-panel{
+    width: 100%;
+    height: auto;
+}
+
+.admin-panel .panel{
+    width:100%;
+    height: auto;
+}
+
+/*LEFT PART START*/
+.admin-panel .panel .panel-left{
+    background:#ffffff;
+    position: fixed;
+    padding:100px 10px 30px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1111111111;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 250px;
+    height:100vh;
+    display: block;
+    /*overflow-y: scroll;*/
+}
+
+/*TOP BANNER PART SLIDE BARS*/
+.admin-panel .top-head-banner{
+    position: absolute;
+     position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    width:250px;;
+    background:#edf2f4!important;
+    height: 78px;;
+    top: 0;
+    left: 0;
+    gap: 30px;
+    z-index: 1111111111111;
+}
+
+.admin-panel .top-head-banner img{
+    width:auto;
+    height: 80px;;
+}
+
+.admin-panel .top-head-banner i{
+    font-size: 20px;
+}
+
+.admin-panel .top-head-banner i:hover{
+    color: #3a86ff;
+}
+
+/*TOP BANNER PART SLIDE BARS END*/
+
+.admin-panel .panel .panel-left .left{
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+    padding: 0 10px 0 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.admin-panel .panel .panel-left .left i{
+    font-size: 16px;
+    color:#333333;
+}
+
+.admin-panel .panel .panel-left .left a{
+    font-size: 13px;
+    color:#333333;
+    position: relative;
+     margin-left: 15px;
+}
+
+.admin-panel .panel .panel-left .left:hover{
+        background: #caf0f8;;
+}
+
+.admin-panel .panel .panel-left .left:hover i, .admin-panel .panel .panel-left .left:hover a{
+    color: #3a86ff;
+}
+
+
+
+.admin-panel .panel .panel-left .active{
+        background: #caf0f8;
+        color:#3a86ff!important;
+}
+
+/*LEFT PART END*/
+/*................................................................................................................*/
+/*................................................................................................................*/
+/*................................................................................................................*/
+
+/*RiGHT PART START*/
+.panel-right{
+    width:100%;
+    height: 100vh;
+    background: #f8f9fa;
+}
+
+.panel-right .form-right-part{
+    width:83.5%;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    position: absolute;
+    overflow-y: scroll;
+    padding:100px 20px 25px  20px;
+/*    overflow-x: hidden;*/
+}
+
+/*INSERT PRODUCT START*/
+.panel-right  .add-top-title{
+   font-size: 18px;
+   max-width:380px;
+   word-spacing: 1px;
+   letter-spacing: 2px;
+   margin: auto;
+   margin-bottom: 10px;
+}
+
+.panel-right .right{
+    max-width:380px;
+    height: auto;
+    background: #ffffff!important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding:15px;
+    margin: auto;
+}
+
+.panel-right  .label{
+   font-size: 15px;
+   word-spacing: 1px;
+   letter-spacing: 1px;
+}
+
+.panel-right  .label{
+   font-size: 15px;
+   word-spacing: 1px;
+   letter-spacing: 1px;
+   margin-bottom:3px;
+}
+
+.panel-right .title{
+    width: 100%;
+    height: 35px;
+    outline: 0;
+    border: 1.5px solid #cccccc;
+    padding:5px;
+    margin-bottom:10px;
+    letter-spacing: 1.5px;
+    word-spacing: 1px;
+    border-radius: 5px;
+}
+
+.panel-right .description{
+    width: 100%;
+    height: 70px;
+    outline: 0;
+    border: 1.5px solid #cccccc;
+    padding:5px;
+    margin-bottom:5px;
+    letter-spacing: 1.5px;
+    word-spacing: 1px;
+    border-radius: 5px;
+}
+
+
+
+.panel-right .product-images .product-images-choose{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 7px;
+}
+
+.panel-right .product-images .product-images-choose .image{
+    position: relative;
+    max-width:22%;
+    max-height:70px;
+    margin-bottom: 10px;
+    border: 1.5px solid #cccccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.panel-right .product-images .product-images-choose .image .upload{
+    position: absolute;
+    color : #ffffff;
+    font-size: 13px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.panel-right .product-images .product-images-choose .image i{
+    position: absolute;
+    font-size: 18px;
+    color : #ffffff;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.panel-right .product-images .product-images-choose .image .input-image{
+    padding:28px 0 28px 0;
+    outline: 0;
+    border: 0;
+    opacity: 0;
+    
+}
+
+.panel-right .productCategory .productCategorySelect{
+     width:100%;;
+     height: 35px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin: 3px 0 10px 0;
+    outline: 0;
+    border: 1.5px solid #cccccc;
+    border-radius: 5px;
+}
+
+.panel-right .productCategory .productCategorySelect .option{
+    font-size: 13px;
+    padding:3px;
+    word-spacing:1px;
+    letter-spacing: 1px;
+}
+
+.panel-right .price{
+     width:100%;;
+     height: 35px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    margin: 3px 0 12px 0;
+    outline: 0;
+    border: 1.5px solid #cccccc;
+    padding:3px;
+    border-radius: 5px;
+}
+
+.panel-right .check-Box{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.panel-right .checked{
+    width: 15px;
+    height: 15px;
+}
+
+.panel-right  .label-check{
+    position: relative;
+    top: 1px;
+}
+
+.panel-right  .productBtn{
+    outline: 0;
+    border: 1.5px solid #cccccc;
+    padding: 5px 10px 5px 10px;
+    background: #009999;
+    color:#ffffff;
+    font-size: 14px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.panel-right .title:focus, .panel-right .description:focus, .panel-right .productCategorySelect:focus, .panel-right .price:focus{
+    border: 1px solid #009999!important;
+}
+
+.panel-right .image:hover{
+    border: 1px solid #009999!important;
+    background:  #009999!important;
+   
+}
+
+
+.temp{
+    color: #333333!important;
+}
+
+
+.panel-right .image:hover .temp{
+    color: #666666!important;
+    display: none;
+}
+
+/*RiGHT PART END*/

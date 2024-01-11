@@ -66,6 +66,44 @@ public class registerDao {
     }
     
     
+    public boolean updateUserDetails(registerEntities userDetails){
+        
+        boolean flag = false;
+        
+        try{
+            
+            Session s = this.factory.openSession();
+            
+            Transaction tx  = s.beginTransaction();
+            
+            String hql = "update registerEntities set userName=:name, userEmail=:email, userPassword=:password, userPhone=:phone, userType=:type, userPic=:part where userId=:userId";
+            
+           Query query =s.createQuery(hql);
+           
+           query.setParameter("name", userDetails.getUserName());
+           query.setParameter("email", userDetails.getUserEmail());
+           query.setParameter("password", userDetails.getUserPassword());
+           query.setParameter("phone", userDetails.getUserPhone());
+           query.setParameter("type", userDetails.getUserType());
+           query.setParameter("part", userDetails.getUserPic());
+           query.setParameter("userId", userDetails.getUserId());
+           
+           int result = query.executeUpdate();
+            
+            tx.commit();
+            s.close();
+            
+            return flag=true;
+            
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        
+        
+        return flag;
+    }
+    
+    
     
     public List<registerEntities> getAllUserDetails(){
         

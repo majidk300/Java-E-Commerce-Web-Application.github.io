@@ -18,6 +18,8 @@
         <property name="format_sql">true</property>
         
         <mapping class="com.ecommerce.entitites.registerEntities" />
+        <mapping class="com.ecommerce.entitites.addProductsEntities" />
+        <mapping class="com.ecommerce.entitites.productCategoryEntities" />
         
     </session-factory>
 

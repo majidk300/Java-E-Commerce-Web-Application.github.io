@@ -23,6 +23,7 @@
         <div class="container">
             <div class="wrapper">
                  <%@include file="components/message/errorMessage.jsp" %>
+                 <%@include file="components/message/successMessage.jsp" %>
                 <div class="title"><span>Login Form</span></div>
                 <form action="loginServlet" method="post">
                     <div class="row">

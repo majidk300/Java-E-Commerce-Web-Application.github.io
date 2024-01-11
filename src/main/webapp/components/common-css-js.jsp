@@ -3,6 +3,11 @@
 
 <!--Css-->
 <link rel="stylesheet" href="components/navbar/navbar.css"/>
+<link rel="stylesheet" href="components/Style-CSS/admin-panel-style.css"/>
+
+<link rel="stylesheet" href="components/Style-CSS/AdminPagecategory.css"/>
+
+<script src="components/javascript/onclickEvent.js"></script>
 
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
